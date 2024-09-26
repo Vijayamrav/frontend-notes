@@ -1,0 +1,20 @@
+scope:scope is defined as current context of your code 
+
+global scope:when variable is declared globally then it is accessible  from anywhere in the script
+local scope:when variables are declared in fucntion then those variables are in local scope to that function
+block scope:when varibales are declared in blocks(if,while) those variables are in block scope
+
+lexical scoping means the scope of the function is detrmined by where the function is declared but not where is called
+
+closure:
+function bundled with the lexical scope forms a closure
+inner function can able to access the variables present in outer function becasue of inner function is binded with the lexical scope of parent function and forms a closure.
+
+the inner function remembers the variable reference in the memory location(heap memory)
+
+variables that are part of closures are stored in heap memory but not in stack memory.
+
+primitive data types like numbers,boolean,strings are stored in stack memory(call stack)
+
+but when a function returns a another function then innerfunction binds with lexical scope of outerfucntion forms a closures
+the variables present in outer function are stored in heap memory whether they are primitive data types.
