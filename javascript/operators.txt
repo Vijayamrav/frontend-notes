@@ -1,0 +1,27 @@
+types of opeartors:
+
+1)conditional operators also known as ternary operators
+ternary operator is the only operator which takes three arguments.
+ternary operator is used to assign value to a variable based on a condition.
+
+2)uniary operators 
+ +,-,++,--,!,~,void,delete
+
+3)relational operators
+>,<,>=,<=,==,===
+
+4)bitwise operators
+bitwise opeartors are used to interact with the variables at bit level
+bitwise AND(&)
+bitwise OR(|)
+XOR(^)
+NOT(~)
+LEFT SHIFT(<<)  exmaple 5<<1 5 in binary form is shifted to the left by 1 position
+RIGHT SHIFT(>>) exmaple 5>>1 in binary from is shifted to right by 1 position
+
+5)logical opeartors
+logical AND
+logical OR 
+NOT
+nullish operator(??)
+
