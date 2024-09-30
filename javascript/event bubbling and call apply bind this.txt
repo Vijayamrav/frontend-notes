@@ -1,0 +1,29 @@
+event bubbling:
+event bubbling is a default behaviour in web browsers when event is triggered on the target element,it firsts triggers any event listeners on that element then it propagates upwards thorough each parent element until it reaches the root of the document
+
+event capturing:
+event moves from outermost element to target element
+
+event delegation:
+event delegation is a technique where single event is added to parent to manage events of the child elements
+
+this keyword
+if the value of this keyword is null or undefined then this keyword is replaced with global object only in  non strict mode
+
+note:this keyword value depends on how fucntion is called
+
+value of this in object method is the object itself
+example:
+obj={
+  a:10,
+  func:function (){
+console.log(this)
+}
+}
+}
+//output:{
+a:10,
+func:f()
+}
+
+note:when working with iife make sure to end the statement which is above the iife with semicolon.
