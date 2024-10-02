@@ -26,4 +26,163 @@ a:10,
 func:f()
 }
 
+NOTE:this keyword is referenced to the execution context in whcih fucntion is called.this means the value of this keyword depends on how and where function is called
+
 note:when working with iife make sure to end the statement which is above the iife with semicolon.
+
+call method:call method is prefined function method used to invoke a fucntion with a specified this context and arguments are passed individually
+
+apply method:apply method is a predefined fucntion method used to invoke a function with specified this context and arguments are passed as an array
+ 
+bind method:bind method is used to bind the object with method and returns a copy of that method.maintaining the this context
+
+DEBOUNCING:
+Debouncing is a technique that delays the execution of a function until the user stops performing a certain action for a specified amount of time.
+this technique is particularly used when events are triigering in quick time like 
+typing an input field
+button clicks
+scrolling
+
+tHROTTLING:throttling is a technique which limits the execution of a fucntion only once for specified amount of time
+
+what is the currying function?
+currying is a process of taking function with multiple arguments and converting it into sequence of functions each with only one argument.
+ 
+what is temporal dead zone?
+temporal dead zone is a area where variable is inaccessible until is initialized with a value.let and const are hoisted and stored in temporal dead zone.we cannot access them before initialization.
+
+what is IIFE?
+IIFE is a jaavscript function that is executed immediately after fucntion creation.
+teh primary use of a IIFE is data privacy because variables which are present in IIFE are cannot be accessed in outside code.
+
+what is hoisting?
+hoisting is a mechanism where variable,fucntion declarations and classes are moved to their scope before code executon.javascript only hoists declarations but not initialization.
+
+what is a service worker?
+service worker is a javascript file which runs in the background provides features which are not required by web page.service worker is used for rich offline experience.
+
+what is a cookie?
+cookie is a piece of data stored in computer's memory can be accesible by the browser.
+cookie is used to store user profiles in the form of key-value pairs.when user again visits the webpage cookie remenbers the user profile and application doesn't ask for authorization again.
+
+
+what is a promise?
+promise is a object which may produce a value some time in the future with either a resolved value or a reason for why its rejected.it has three possible states.fulfilled,rejected or pending.
+
+what is a callback function?
+callback function is a function that is passed as an argument into another function.the callback fucntion is invoked inside the outer fucntion
+
+what is promise chaining?
+the process of executing a sequence of asynchronous operations one after the other using .then methods is knows as promise chaining.
+
+what is promise.all()
+promise.all is a promise that takes an array of promises as input if all the promises are resloved then it gets resolved if any one of the promise is rejected then it  is rejected.
+
+what is promsie.race()
+promise.race() takes a array of promises as an input and returs promise object value of the promise which is resloved or rejected first.
+
+what is strict mode?
+strict mode is a new feature introduced in ES5.strict mode allows us to prevent certain actions like
+we cannot assign a value to a implicit global varibale.
+we cannot delete variabels and fucntions using delete keyword in strict mode.
+strict mode doesn't allow to use same arugument names in a function.
+in strict mode when we changed properties values of a freeze object then it throws error but in non strict mode it doesn't throws error.
+
+what is undefined property?
+undefined property indicates that variable is declared but not assigned a value,or variable is declared but not assigned.typeof undefined is undefined.
+
+what is null value?
+null value represents intentional absense of any object value.the typeof null is a object.
+
+undefined represents absence of a variable
+while performing primitive operations undefined is converted into NaN
+
+null represents absense of a value
+while performing primitive operations null is converted into 0
+
+
+generate a random number between range?
+
+function generateRandom(min,max){
+  const random=Math.floor(Math.random()*(max-min+1))+min
+  return random
+}
+
+event bubbling?
+event bubbling is a type of event propagation where event is triggered first on innermost target element then sucessively triggers event on its parents until it reaches the root of the document.
+
+event capturing?
+event capturing is a type of event propagation where event is first captured by the outermost element and sucessively triggers on the childer until it reaches inner most element.
+
+what is the purpose of void 0?
+void(0) is used to prevent the page from refreshing.
+<a href="javascript:void(0)" onclick="alert("hello")"/>
+
+what is preventDeafault methof?
+when we use preventDefault method the default action or behaviour belongs to event doesn't occur.
+
+what is stopPropagation method?
+stop propagation method is used to stop the event from bubbling up the event chain.
+
+what is evvent delegation?
+event delegation is a technique where single event listener is added to a parent elelemnt instead of multiple event listeners to child events.parent can handle events triggered on child elements.
+
+what are break and continue statements?
+break statement is used to "jump out"  of the loop.it breaks the loop and continue to execute the code outside of the loop.
+
+continue statement is used to "jump over" one iteration in the loop.it skips one iteration if specified condition is met and continue with other iterations in the loop.
+
+Can you give an example of when you really need a semicolon in js?
+when IIFE fucntion is not preceeded with a semicolon then unexpected results or syntax error will occur>
+when multiple declarations on a single line semi-colon is required.
+
+what is freeze method?
+freeze method is used to freeze a object.when object is in freeze mode we cannot modify properties,we cannot delete existing properties,cannot add new properties.But freezing only applies to top level properties but not for nested objects.
+
+what is rest parameter?
+rest parameter is used to pass n number of arguments as an array to a function.
+
+logical opeartors?
+logical operators works with boolean values.there are three types
+logical AND(&&) returs true if both the conditions  are true
+logical OR(||) returns true if any one of the condition is true
+logical NOT(!) inverts the boolean value
+
+bitwise opeartors?
+bitwise opeartors perform opeartions on binary representations of integers at bit level.
+types:
+BITWISE AND(&):compares each bit of two numbers,if both the bits are 1 retuens 1 otherwise 0
+BITWISE OR(|) compares each bit of two numbers,if any one of the bit is 1 returns 1 otherwsie 0
+XOR(^):if both the bits of two numbers are different returns 1 otherwsie returns 0
+NOT(~):invers the bits
+left shift
+right shift
+
+what is spread opeartor?
+spread opeartor allows objects/arrays to be expaned to single  arguments.
+
+what is Object.assign() method?
+Object,assign method is ussed to copy properties and values of one or more source objects to a target object.it returnas a target object containing properties and values of source objects.
+iT is used to clone a object.
+it is used to merge objects having same peroperties.
+
+what is event loop?
+event loop is a process that continuosly monitors the callstack and callback queue.checks whether callstack is empty or not.if callstack is empty then events present in callback queue are pushed into callstack.events are executed in callstack.if any new events are generated in callstack there are queued into callabck queue.
+
+what are ES6 features?
+arrow functions
+template literals
+let and const
+classes
+modules
+spread and rest opeartors
+destructuring
+promises
+deafult parameter fucntions.
+
+array destructuring?
+array destructing is used to extract elements from array and assign variables to them in simpler syntax
+
+obejct destrcturing?
+object destructuring is used to extarct properties of objects and assign variables to them
+
